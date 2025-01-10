@@ -1,4 +1,5 @@
 const errorHandler = require("../helpers/errorHandler")
+const Shops = require("../models/Shops")
 const Tool = require("../models/Tools")
 
 const createTool = async (req, res) => {
@@ -49,7 +50,9 @@ const updateTool = async (req, res) => {
 const getTools = async (req, res) => {
     try {
         
-        const tools = await Tool.findAll()
+        const tools = await Tool.findAll({
+            include:Shops
+        })
 
         return res.status(201).send(tools);
 
