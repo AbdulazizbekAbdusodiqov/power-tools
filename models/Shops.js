@@ -26,6 +26,6 @@ const Shops = sequelize.define("shops", {
 });
 
 Shops.belongsTo(Owner)
-Owner.hasMany(Shops, {onDelete : "CASCADE"})
+Owner.hasMany(Shops)
 
 module.exports = Shops

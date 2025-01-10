@@ -2,6 +2,8 @@ const express = require("express")
 const config = require("config")
 const sequelize = require('./config/db')
 
+const Order = require("./models/Order")
+
 const mainRouter = require('./router/index.routes')
 
 const app = express()

@@ -5,6 +5,11 @@ const Tool = require("./Tools");
 
 const ShopTool = sequelize.define("shop_tool",
     {
+        id:{
+            type:DataTypes.INTEGER,
+            primaryKey : true,
+            autoIncrement : true
+        },
         rent_price: {
             type: DataTypes.DECIMAL(15, 2),
         },
